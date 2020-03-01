@@ -13,5 +13,5 @@ The NetHack core code is included in the directory `nethack`.
 
 ## Licenses
 
-* Nes Port: GPL v3 (see COPYING)
+* Nes Port: GPL v3 (see LICENSE)
 * NetHack: NETHACK GENERAL PUBLIC LICENSE (see `nethack/dat/license`)
