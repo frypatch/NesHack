@@ -353,7 +353,7 @@ void writeMap(void) {
   writeMapRow( 1, "  j0          # # #           ");
   writeMapRow( 2, "j1# # - - - - + - - - -       ");
   writeMapRow( 3, "    # | . . . . . . . |       ");
-  writeMapRow( 4, "    # | a a0a1a2a3. . |       ");
+  writeMapRow( 4, "    # | a a0a1a2a3a4. |       ");
   writeMapRow( 5, "    # + . . . b b0b1. |       ");
   writeMapRow( 6, "      | . . @ c c0c1?A|       ");
   writeMapRow( 7, "      | . . A C !A!B!C|       ");
@@ -411,9 +411,9 @@ unsigned char ATTRIBUTE_TABLE[0x40]={
 // LARGE_TILES[9] is the sprite's y-offset from the tile's upper right corner
 // LARGE_TILES[10] is the sprite's pallet
 //------------------
-const char CATALOGUE_SIZE = 33;
+const char CATALOGUE_SIZE = 34;
 const char LARGE_TILE_SIZE = 11;
-const char LARGE_TILES[33 * 11 + 1] = {
+const char LARGE_TILES[34 * 11 + 1] = {
   '@',' ', 14, 15, 30, 31,  2,  0,  0,  0,  0, //Hero
   '+',' ', 12, 13,  1,  1,  0, 43,  5,  6,  1, //Dungeon Door - Closed
   '|','+', 12, 13, 28, 29,  0, 16,  4,  1,  0, //Dungeon Door - Open
@@ -441,9 +441,10 @@ const char LARGE_TILES[33 * 11 + 1] = {
   'C',' ',134,135,148,149,  2,  0,  0,  0, 0, //Centaur
   'a',' ',160,  0,176,145,  2,  0,  0,  0, 0, //Giant Ant
   'a','0',128,129,144,145,  2,  0,  0,  0, 0, //Killer Bee
-  'a','1',128,  0,176,145,  0,243,  1, -5, 2, //Soldier Ant
+  'a','1',128,  0,176,145,  2,243,  1, -5, 2, //Soldier Ant
   'a','2',128,  0,176,145,  3,241,  1, -5, 1, //Fire Ant
-  'a','3',128,129,144,145,  2,240,  1, -5, 1, //Queen Bee
+  'a','3',160,129,176,145,  0,  0,  0,  0, 0, //Giant Beatle
+  'a','4',128,129,144,145,  2,240,  1, -5, 1, //Queen Bee
   'b',' ',130,  0,146,147,  3,  0,  0,  0, 0, //Acid Blob
   'b','0',130,  0,146,131,  0,  0,  0,  0, 0, //Quivering Blob
   'b','1',130,  0,146, 43,  3,  0,  0,  0, 0, //Gelatinous Cube
