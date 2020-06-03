@@ -263,8 +263,8 @@ const char PALETTE[32] = {
 
   0x30,0x0D,0x17,0x00,  // background palette 0
   0x12,0x22,0x2D,0x00,  // background palette 1
-  0x00,0x17,0x27,0x00,  // background palette 2
-  0x25,0x16,0x1A,0x00,  // background palette 3
+  0x26,0x17,0x27,0x00,  // background palette 2
+  0x25,0x16,0x2B,0x00,  // background palette 3
 
   0x00,0x2D,0x2C,0x00,  // sprite palette 0
   0x0D,0x17,0x28,0x00,  // sprite palette 1
@@ -350,12 +350,12 @@ void writeMapRow(char rowIndex, char* map_row) {
 
 void writeMap(void) {
   writeMapRow( 0, "j #               #           ");
-  writeMapRow( 1, "  j           # # #           ");
-  writeMapRow( 2, "j # # - - - - + - - - -       ");
+  writeMapRow( 1, "  j0          # # #           ");
+  writeMapRow( 2, "j1# # - - - - + - - - -       ");
   writeMapRow( 3, "    # | . . . . . . . |       ");
   writeMapRow( 4, "    # | . . . . . . . |       ");
   writeMapRow( 5, "    # + a a0a1b b0b1. |       ");
-  writeMapRow( 6, "      | . j @ c c0c1?A|       ");
+  writeMapRow( 6, "      | . . @ c c0c1?A|       ");
   writeMapRow( 7, "      | . . A C !A!B!C|       ");
   writeMapRow( 8, "      - - - - - - - |+-       ");
   writeMapRow( 9, "- - - -             # # # # # ");
@@ -411,9 +411,9 @@ unsigned char ATTRIBUTE_TABLE[0x40]={
 // LARGE_TILES[9] is the sprite's y-offset from the tile's upper right corner
 // LARGE_TILES[10] is the sprite's pallet
 //------------------
-const char CATALOGUE_SIZE = 30;
+const char CATALOGUE_SIZE = 31;
 const char LARGE_TILE_SIZE = 11;
-const char LARGE_TILES[30 * 11 + 1] = {
+const char LARGE_TILES[31 * 11 + 1] = {
   '@',' ', 14, 15, 30, 31,  2,  0,  0,  0,  0, //Hero
   '+',' ', 12, 13,  1,  1,  0, 43,  5,  6,  1, //Dungeon Door - Closed
   '|','+', 12, 13, 28, 29,  0, 16,  4,  1,  0, //Dungeon Door - Open
@@ -450,6 +450,7 @@ const char LARGE_TILES[30 * 11 + 1] = {
   'c','1',132,133,148,149,  3,241,  4, -7, 1, //Pyrolisk
   'j',' ',  0,136,151,152,  1,242,  2, 10, 0, //Blue Jelly
   'j','0',  0,136,151,152,  3,  0,  0,  0, 0, //Spotted Jelly
+  'j','1',  0,136,151,152,  2,  0,  0,  0, 0, //Ochre Jelly
   -1
 };
 
